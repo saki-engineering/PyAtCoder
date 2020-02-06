@@ -9,13 +9,5 @@ from collections import Counter
 N,K = map(int, input().split())
 A = list(map(int, input().split()))
 
-middle = -1
-for i in range(N):
-    if A[i] == 1:
-        middle = i
-
-left = i
-right = N-i-1
-
-if (left%(K-1))+(right%(K-1)+1) <= K:
-    
+ans = math.ceil((N-1)/(K-1))
+print(ans)
